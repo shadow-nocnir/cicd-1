@@ -17,9 +17,9 @@ jobs:
         run: echo "Hello world from push event on Github Actions ;-)"
 
       - name: Greet main branch 💻
-        if: ${{ github.ref == 'refs/head/main' }}
+        if: ${{ github.ref == 'refs/heads/main' }}
         run: echo "Hello world from main branch! 💻"
 
       - name: Greet develop branch 🧪
-        if: ${{ github.ref == 'refs/head/develop' }}
+        if: ${{ github.ref == 'refs/heads/develop' }}
         run: echo "Hello world from develop branch! 🧪"
