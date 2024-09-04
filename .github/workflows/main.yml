@@ -1,0 +1,17 @@
+name: HelloWorld
+
+on:  
+  push:
+     branches:
+       - main
+       - develop
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download repo
+        uses: actions/checkout@v2
+
+      - name: Hello push
+        run: echo "Hello world from push event on Github Actions"
