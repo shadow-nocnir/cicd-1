@@ -11,7 +11,15 @@ jobs:
 
     steps:
       - name: Download repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Hello push
-        run: echo "Hello world from push event on Github Actions"
+      - name: Hello push ;-)
+        run: echo "Hello world from push event on Github Actions ;-)"
+
+      - name: Greet main branch 💻
+        if: ${{ github.ref == 'refs/head/main' }}
+        run: echo "Hello world from main branch! 💻"
+
+      - name: Greet develop branch 🧪
+        if: ${{ github.ref == 'refs/head/develop' }}
+        run: echo "Hello world from develop branch! 🧪"
